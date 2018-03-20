@@ -1,5 +1,6 @@
 package com.fourstay.step_definitions;
 
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
@@ -49,7 +50,7 @@ public class Search_across_states_stepDef {
 		  BrowserUtilities.switchTabs("search");
 		  BrowserUtilities.waitForPageToLoad();
 		    
-		    Set<String> actualStates= new HashSet<>();
+		    List<String> actualStates= new ArrayList<>();
 		    for(WebElement element: searchPage.allStates){
 		    	actualStates.add(element.getText());
 		    }
